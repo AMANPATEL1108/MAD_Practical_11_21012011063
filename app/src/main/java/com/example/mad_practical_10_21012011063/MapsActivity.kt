@@ -1,8 +1,8 @@
-package com.example.mad_practical_10_21012011063
+package com.example.mad_practical_11_21012011063
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.mad_practical_10_21012011063.databinding.ActivityMapsBinding
+import com.example.mad_practical_11_21012011063.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment

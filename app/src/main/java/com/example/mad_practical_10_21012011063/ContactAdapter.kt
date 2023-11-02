@@ -1,4 +1,4 @@
-package com.example.mad_practical_10_21012011063
+package com.example.mad_practical_11_21012011063
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.TextView
-import com.example.mad_practical_10_21012011063.Contact
+import com.example.mad_practical_11_21012011063.Contact
 
 
 class ContactAdapter(context: Context, private val array: ArrayList<Contact>) : ArrayAdapter<Contact>(context, 0, array) {
