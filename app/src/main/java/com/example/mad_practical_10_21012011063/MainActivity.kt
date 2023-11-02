@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            R.id.Sqlitedb ->{
+            R.id.SqliteDB ->{
 
                 return true
             }
@@ -95,5 +95,33 @@ class MainActivity : AppCompatActivity() {
         {
             e.printStackTrace()
         }
+    }
+
+    private fun JsonDB(){
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val data = HttpRequest().makeServiceCall(
+                    "https://api.json-generator.com/templates/qjeKFdjkXCdK/data",
+                    "rbn0rerl1k0d3mcwgw7dva2xuwk780z1hxvyvrb1"
+                )
+                withContext(Dispatchers.Main) {
+                    try {
+                        if(data != null)
+                        {
+                            runOnUiThread{getPersonDetailsFromJson(data)}
+                        }
+                    }
+                    catch (e: Exception)
+                    {
+                        e.printStackTrace()
+                    }
+                }
+            }
+            catch (e: Exception)
+            {
+                e.printStackTrace()
+            }
+        }
+
     }
 }
