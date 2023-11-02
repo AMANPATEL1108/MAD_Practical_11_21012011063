@@ -69,18 +69,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_button1 -> {
-                Toast.makeText(this@MainActivity, "Clicked on item at menu!", Toast.LENGTH_SHORT).show()
+        return when(item.itemId){
+            R.id.Sqlitedb ->{
+
                 return true
             }
-            R.id.action_button2 -> {
-                var personList: ArrayList<Contact> = databaseHelper.getAllPersons()
-                recyclerView.layoutManager = LinearLayoutManager(this)
-                recyclerView.adapter = ContactAdapter(this, personList)
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
         }
     }
 
